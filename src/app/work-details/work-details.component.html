@@ -1,0 +1,75 @@
+<section class="work-details">
+    <div class="container">
+
+        <!-- <li *ngFor="let i of works_details">
+           <a href="" routerLink="/work_details/{{i.PageName}}"> {{ i.PageName }}</a>
+           </li> -->
+        <div class="details" *ngFor="let i of works_details">
+
+            <div *ngIf="i.PageName===Webpage">
+
+                <div class="row">
+
+                    <div class="col-lg-9">
+                        <div class="d-flex rounded-3 justify-content-between align-items-center mb-3">
+                            <h3 class=" text-underline">{{i.PageName}}</h3>
+
+                            <a href="{{i.demolink}}" class="btn btn-warning py-2 px-3 ">View demo</a>
+                        </div>
+                        <p>{{i.details}}</p>
+                        <br>
+                        <ul class="otherpages_list">
+                            <li>
+                                <a href="" class="active" routerLinkActive="active"
+                                    (click)="changePages(i.indexpage,i.mobileView,$event)">index page </a>
+                            </li>
+                            <li *ngFor="let j of i.otherPages">
+                                <a href="" routerLinkActive="active"
+                                    (click)="changePage(j.image,j.imageMobile,$event)">{{j.page}} page</a>
+                            </li>
+                        </ul>
+
+
+                        <h3 class="sub-heading-3 text-center mb-4 mt-4">Desktop view</h3>
+                        <div class="maskbg">
+                            <img src="assets/Images/Computer-Screen.png" class="w-100">
+                            <div class="mask1" id="maskscroll">
+                                <div class="opacity-box">
+                                    <h5 class="m-auto"> Scroll down here to view full page</h5>
+                                </div>
+                                <img [src]="i.indexpage" class="previewPage">
+                            </div>
+                        </div>
+                        <!-- <div class="mask1">
+                            <img [src]="i.indexpage" alt="Cinque Terre">
+                            </div> -->
+                    </div>
+                    <div class="col-lg-3">
+                        <h3 class="sub-heading-3 text-center mb-4">Mobile view</h3>
+                        <div class="mask-phone">
+                            <img src="assets/Images/iphone-12-pro-max.png" class="w-100">
+                            <div class="mask2">
+                                <div class="opacity-box">
+                                    <h5 class="m-auto"> Scroll down here to view full page</h5>
+                                </div>
+                                <img [src]="i.mobileView" class="previewPage-mobile" alt="mobile view not available">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <ul class="other-works owl-carousel owl-theme">
+            <li *ngFor="let i of works_details" class="item">
+                <a href="" routerLink="/work_details/{{i.PageName}}" routerLinkActive="active">{{i.PageName}}</a>
+                <img [src]="i.indexpage" class="w-100">
+            </li>
+        </ul>
+    </div>
+
+</section>

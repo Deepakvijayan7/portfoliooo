@@ -1,0 +1,70 @@
+<nav class="navbar navbar-expand-lg text-dark fixed-top " id="header_nav">
+    <div class="container nav-container">
+      <a class="navbar-brand" href="">
+        <img src="assets/Images/logo.png" class="logo">
+  
+        <!-- <h6 class="mb-0"><b>Deepak N</b><br><i>porfolio</i></h6> -->
+      </a>
+      <!-- <h6 class=" ms-2 me-auto header-text">Deepak N</h6> -->
+      <!-- <h6 class="mt-auto ms-2 me-auto header-text"></h6> -->
+      <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbar_ul"
+        aria-controls="navbar_ul" aria-expanded="true" aria-label="Toggle navigation">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbar_ul">
+        <ul class="navbar-nav mb-2 mb-lg-0">
+          <li class="nav-item ">
+            <a class="nav-link" aria-current="page" [routerLinkActive]="['active']" routerLink=""
+              [routerLinkActiveOptions]="{exact:true}">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="about" [routerLinkActive]="['active']"
+              [routerLinkActiveOptions]="{exact:true}">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="works" [routerLinkActive]="['active']"
+              [routerLinkActiveOptions]="{exact:true}">Works</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="contact" [routerLinkActive]="['active']"
+              [routerLinkActiveOptions]="{exact:true}">Contact</a>
+          </li>
+        </ul>
+       
+      </div>
+      <!-- <button class="toggler-btn bg-warning"  id="theme"><img src="assets/Images/dark_mode.png" class="btn-icon"></button> -->
+    </div>
+  </nav>
+  
+  <div class="navbar-mobile">
+    <ul>
+      <li>
+        <a class="nav-link" aria-current="page" [routerLinkActive]="['active']" routerLink=""
+              [routerLinkActiveOptions]="{exact:true}">
+              <img src="assets/Images/home-mobile.png">
+              <p>Home</p>
+            </a>
+    </li>
+      <li>
+        <a class="nav-link" routerLink="contact" [routerLinkActive]="['active']"
+              [routerLinkActiveOptions]="{exact:true}">
+              <img src="assets/Images/contact-mobile.png">
+              <p>contact</p>
+            </a></li>
+      <li>
+        <a class="nav-link" routerLink="about" [routerLinkActive]="['active']"
+        [routerLinkActiveOptions]="{exact:true}">
+        <img src="assets/Images/about-mobile.png">
+        <p>About</p></a>
+       
+      </li>
+      <li>
+        <a class="nav-link" routerLink="works" [routerLinkActive]="['active']"
+        [routerLinkActiveOptions]="{exact:true}"><img src="assets/Images/works.png">
+        <p>My works</p>
+      </a>
+    </li>
+    </ul>
+  </div>

@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component,OnInit } from '@angular/core';
+import * as AOS from 'aos';
 
+declare var name: any;
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,4 +9,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'portfolio';
+  ngOnInit(){
+    AOS.init();
+    
+   }
 }

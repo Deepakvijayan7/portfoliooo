@@ -1,1 +1,223 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+    /* font-family: 'Montserrat', sans-serif; */
+    font-family: 'Raleway', sans-serif;
+}
+
+:root {
+    --primary-color: #0d375c;
+    --secondary-color: #005278;
+    --white-color: #ffffff;
+    --gray-color: #444444;
+    --golden-color:#f6d89f;
+    --darktheme-font:#cccccc;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0px !important;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+p {
+    margin-bottom: 0px !important;
+}
+
+.ml2 {
+    font-weight: 900;
+    font-size: 3.5em;
+}
+
+.ml2 .letter {
+    display: inline-block;
+    line-height: 1em;
+}
+.golden_bg::after{
+    background-color: #f6d89f !important;
+}
+.hover_white:hover h4{
+    color: #fff !important;
+}
+.primary-button {
+    padding: 10px 25px;
+    border-radius: 10px;
+    border: 1px;
+    box-shadow: 0px 0px 0px 1px var(--primary-color);
+    /* background: var(--primary-color); */
+    color: #fff;
+    transition: 0.4s all;
+    /* background-color: transparent; */
+    background: linear-gradient(to left, var(--primary-color) 50%, #fff 50%) right;
+    background-size: 220% 120%;
+    display: inline-block;
+}
+.primary-button label{
+    cursor: pointer;
+}
+.btn-icon{
+    width: 30px !important;
+    object-fit: contain !important;
+    height: 30px;
+    padding: 5px;
+}
+.dark_mode_mobile{
+    background-color: #141414 !important;
+    p{
+        color: rgb(162, 160, 160) !important;
+    }
+    img{
+        filter: brightness(0.1) invert(1) !important;
+    }
+}
+.primary-bg{
+    background-color: var(--primary-color);
+}
+.button_bg_green{
+    background: linear-gradient(to left, #08651d 50%, #fff 50%) right;
+    background-size: 220% 120%;
+}
+.primary-button:hover {
+    background-position: left bottom;
+    color: var(--primary-color);
+    /* transform: translateY(-2px); */
+    box-shadow: 0px 3px 5px rgb(130, 127, 127);
+}
+.text-underline{
+    position: relative;
+    padding-bottom: 15px;
+    display: inline-flex;
+}
+.text-underline:after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    width: 50%;
+    height: 4px;
+    background-color: var(--primary-color);
+}
+.text-underline-bg-light::after{
+    background-color: #fff;
+}
+.social-media-ul {
+    display: flex;
+    flex-direction: row;
+}
+
+.social-media-ul li {
+    margin-right: 15px;
+    transition: 0.4s all;
+    border-radius: 50%;
+}
+
+.social-media-ul img {
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+    transition: 0.4s all;
+    filter: invert(1);
+}
+
+.social-media-ul li:hover {
+    background-color: #fff;
+}
+
+.social-media-ul li:hover img {
+    filter: invert(0);
+}
+
+.social-media-black {
+    list-style: none;
+    color: #171721;
+    justify-content: baseline;
+    padding-left: 0;
+}
+
+.social-media-black li {
+    background-color: var(--gray-color);
+}
+
+.social-media-black li:hover {
+    background-color: var(--gray-color);
+    transform: translatey(-3px) !important;
+}
+
+.social-media-black a img {
+    filter: invert(1) !important;
+}
+
+/*  */
+.text-20 {
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.text-18 {
+    font-size: 18px;
+    line-height: 28px;
+}
+
+.sub-heading-24 {
+    font-size: 24px;
+    line-height: 34px;
+}
+
+.opacity-box {
+    position: absolute;
+    background-color: #444141;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    transition: 0.5s all;
+}
+
+.carousel__track {
+    z-index: 999 !important;
+    position: relative !important;
+}
+
+@keyframes growProgressBar {
+
+    0%,
+    33% {
+        --pgPercentage: 0;
+    }
+
+    100% {
+        --pgPercentage: var(--value);
+    }
+}
+
+// @property --pgPercentage {
+//     syntax: '<number>';
+//     inherits: false;
+//     initial-value: 0;
+// }
+
+div[role="progressbar-circle"] {
+    --size: 12rem;
+    --fg: var(--primary-color);
+    --bg: #def;
+    --pgPercentage: var(--value);
+    animation: growProgressBar 3s 1 forwards;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background:
+        radial-gradient(closest-side, white 90%, transparent 0 99.9%, white 0),
+        conic-gradient(var(--fg) calc(var(--pgPercentage) * 1%), var(--bg) 0);
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 25px;
+    color: var(--fg);
+}
+
+div[role="progressbar-circle"]::before {
+    counter-reset: percentage var(--value);
+    content: counter(percentage) '%';
+}

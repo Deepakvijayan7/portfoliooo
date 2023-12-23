@@ -1,0 +1,70 @@
+<section class="works">
+
+    <div class="container">
+        <div class="text-center">
+            <h2 class="mb-3 text-center text-underline">Frontend Works</h2>
+            <p class="text-center">Some of my frontend works are given below</p>
+        </div>
+        <!-- <div class="gallery">
+            <a href="assets/Images/works/luxury/index.png"><img src="assets/Images/works/luxury/index.png"></a>
+            <a href="assets/Images/works/luxury/index.png"><img src="assets/Images/works/luxury/index.png"></a>
+
+            </div> <div class="gallery">
+                <a href="assets/Images/works/luxury/index.png"><img src="assets/Images/works/luxury/index.png"></a>
+                <a href="assets/Images/works/luxury/index.png"><img src="assets/Images/works/luxury/index.png"></a>
+
+                </div> -->
+
+        <ul class="works-ul" >
+            <li *ngFor="let i of works">
+                <div class="img-box-works" >
+                    <div class="img-box-works-inside">
+                        <div class="opacity-box"></div>
+                        <img class="img-demo" id="img-demo" [src]="i.indexpage">
+
+                        <!-- <div class="gallery fancyBox-custom">
+                            <a class="zoom-btn" data-thumb="assets/Images/works/luxury/index.png"
+                                href="assets/Images/works/luxury/index.png" data-fancybox="gallery"
+                                data-caption="Index Page"><i class="bi bi-zoom-in"></i></a>
+                            <a href="assets/Images/works/luxury/about page.png"
+                                data-thumb="assets/Images/works/luxury/about page.png" data-fancybox="gallery"
+                                data-caption="Index Page"></a>
+                            <a href="assets/Images/works/luxury/Contact.png"
+                                data-thumb="assets/Images/works/luxury/Contact.png" data-fancybox="gallery"
+                                data-caption="Index Page"></a>
+                            <a href="assets/Images/works/luxury/Leistung & Preise.png"
+                                data-thumb="assets/Images/works/luxury/Leistung & Preise.png"
+                                data-fancybox="gallery" data-caption="Index Page"></a>
+                            <a href="assets/Images/works/luxury/referenzen page.png"
+                                data-thumb="assets/Images/works/luxury/referenzen page.png"
+                                data-fancybox="gallery" data-caption="Index Page"></a>
+                        </div> -->
+                    </div>
+                </div>
+                <div class="works-content">
+                    <h3 class="sub-heading-3 mb-1">{{i.PageName}}</h3>
+                    <span class="mb-2 tools_text">{{i.tools}}</span>
+                    <p>
+                        {{i.details}}
+                    </p>
+
+                    <!-- <a href="" routerLink="/work_details/{{i.PageName}}" class=" mt-3 primary-button bg-secondary"><label>More
+                        Details</label><i class="bi bi-caret-right"></i></a> -->
+                    <a href="" routerLink="/work_details/{{i.PageName}}" class=" mt-3  primary-button"><label>More
+                            Details</label>
+                            <!-- <i class="bi bi-caret-right"></i> -->
+                        </a>
+                    <!-- <a  *ngIf="i.websiteUrl" [href]="i.websiteUrl" class=" mt-3 ms-2 primary-button">Go to
+                        website<i class="bi bi-caret-right"></i></a> -->
+
+
+                </div>
+            </li>
+
+        </ul>
+    </div>
+
+</section>
+<script>
+
+</script>
