@@ -19,8 +19,3 @@ $(document).ready(function () {
     });
 });
 
-
-$(document).ready(function () {
-  $( ".animation-area li" ).draggable();
-});
-
